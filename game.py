@@ -1,5 +1,12 @@
 # game.py
 import random
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+name=os.getenv("PLAYER_NAME")
+print("Welcome " + name)
 
 print("Rock, Paper, Scissors, Shoot!")
 
@@ -30,4 +37,3 @@ if user_choice in ["rock", "paper", "scissors"]:
             print("The user wins.")
 else:
     print("User input is invalid")
-    exit ()
